@@ -31,13 +31,13 @@ body {
 }
 
 button {
-  margin: 0;
-  padding: 0;
-  border: none;
-  background: transparent;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid var(--color-gray-700);
+  background: var(--color-gray-900);
   cursor: pointer;
-  text-align: left;
-  color: inherit;
+  text-align: center;
+  color: var(--color-gray-100);
 }
 
 .wrapper {
@@ -107,6 +107,28 @@ h1 {
   font-size: 2rem;
 }
 
+.keyboard {
+ width: 100%;
+}
+
+.keyboard-row {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.key {
+  width: 30px;
+  margin: 2px;
+  display: flex;
+  place-content: center;
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
+  font-size: 1.3em;
+  align-items: center;
+}
+
 /*
   Round the corners for the 4 cells at the very corners of
   the game board
@@ -138,6 +160,23 @@ h1 {
   background: var(--color-warning);
   border-color: var(--color-warning);
   color: white;
+}
+
+.key.correct {
+  background: var(--color-success);
+  color: white;
+}
+.key.incorrect {
+  background: var(--color-gray-300);
+  color: white;
+}
+.key.misplaced {
+  background: var(--color-warning);
+  color: white;
+}
+.key.unknown {
+  background: var(--color-gray-900);
+  color: black;
 }
 
 .guess-input-wrapper {
